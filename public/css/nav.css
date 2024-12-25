@@ -1,0 +1,57 @@
+#navigation {
+     background-color: #f8f8f8;
+     padding: 10px 0;
+}
+
+#responsive-nav {
+     display: flex;
+     justify-content: center;
+}
+
+.main-nav {
+     display: flex;
+     justify-content: center;
+     list-style: none;
+     padding: 0;
+     margin: 0;
+}
+
+.main-nav li {
+     margin: 0 20px;
+}
+
+.main-nav a {
+     text-decoration: none;
+     color: #333;
+     font-weight: bold;
+     font-size: 16px;
+}
+
+.main-nav li.active a {
+     color: red;
+     border-bottom: 2px solid red;
+}
+
+.main-nav {
+     display: flex;
+     justify-content: center;
+}
+
+.main-nav.open {
+     display: block;
+     /* Show the menu when open on small screens */
+}
+
+@media (max-width: 768px) {
+     .main-nav {
+          display: none;
+          /* Hide the menu by default on small screens */
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .main-nav.open {
+          display: flex;
+          /* Show the menu when toggled */
+     }
+}
